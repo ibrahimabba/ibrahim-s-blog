@@ -4,7 +4,7 @@ import { Card, Spinner } from 'react-bootstrap';
 import { spinner } from './page-styles/post.module.css';
 import { Link } from 'gatsby';
 
-const AboutPage = () => {
+const BlogPage = () => {
   const [loading, setLoading] = useState(false);
 
   const [posts, setPosts] = useState([]);
@@ -62,4 +62,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default BlogPage;

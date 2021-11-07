@@ -4,7 +4,7 @@ import { Form, Button, Spinner } from 'react-bootstrap';
 import { spinner } from './page-styles/post.module.css';
 import MyVerticallyCenteredModal from '../components/MyVerticallyCenteredModal';
 
-const AboutPage = () => {
+const PostPage = () => {
   const [loading, setLoading] = useState(false);
   const [modalShow, setModalShow] = useState(false);
 
@@ -56,4 +56,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default PostPage;
