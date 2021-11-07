@@ -31,33 +31,31 @@ const BlogPage = () => {
     setLoading(true);
     fetchPost();
     setLoading(false);
-  });
+  }, [setLoading]);
 
   return (
     <Layout pageTitle="My blogs">
-      <>
-        {loading ? (
-          <div style={spinner}>
-            <Spinner animation="grow" size="sm" />
-            <Spinner animation="grow" />
-          </div>
-        ) : (
-          posts.map((post) => (
-            <Card key={post.id} style={{ width: '70%', margin: '2%' }}>
-              <Card.Body>
-                <Card.Title>{post.title}</Card.Title>
-                <Card.Subtitle style={{ fontSize: 12 }} className="mb-2 text-muted">
-                  {post.created}
-                </Card.Subtitle>
-                <Card.Text>{post.details}</Card.Text>
-                <Link to="/details" state={{ post: post }}>
-                  View
-                </Link>
-              </Card.Body>
-            </Card>
-          ))
-        )}
-      </>
+      {loading ? (
+        <div className={spinner}>
+          <Spinner animation="grow" size="sm" />
+          <Spinner animation="grow" />
+        </div>
+      ) : (
+        posts.map((post) => (
+          <Card key={post.id} style={{ width: '70%', margin: '2%' }}>
+            <Card.Body>
+              <Card.Title>{post.title}</Card.Title>
+              <Card.Subtitle style={{ fontSize: 12 }} className="mb-2 text-muted">
+                {post.created}
+              </Card.Subtitle>
+              <Card.Text>{post.details}</Card.Text>
+              <Link to="/details/" state={{ post: post }}>
+                View Post
+              </Link>
+            </Card.Body>
+          </Card>
+        ))
+      )}
     </Layout>
   );
 };

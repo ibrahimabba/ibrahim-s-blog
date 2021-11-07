@@ -20,7 +20,7 @@ const PostPage = () => {
     }
 
     setLoading(true);
-    const response = await fetch('https://personal-blog-978b9-default-rtdb.firebaseio.com/posts.json', {
+    await fetch('https://personal-blog-978b9-default-rtdb.firebaseio.com/posts.json', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
