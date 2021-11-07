@@ -7,7 +7,7 @@ const BlogDetail = ({ location }) => {
     <Layout pageTitle="">
       <div>
         <h3>{post.title}</h3>
-        <h6 style={{ fontSize: 12 }}>Created {post.created}</h6>
+        <h6 style={{ fontSize: 12 }}>{post.created}</h6>
         <p style={{ marginTop: 40 }}>{post.details}</p>
       </div>
     </Layout>
