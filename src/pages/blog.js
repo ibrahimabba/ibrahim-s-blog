@@ -10,6 +10,7 @@ const BlogPage = () => {
   const [posts, setPosts] = useState([]);
 
   const fetchPost = async () => {
+    setLoading(true);
     const response = await fetch('https://personal-blog-978b9-default-rtdb.firebaseio.com/posts.json');
     const resData = await response.json();
 
@@ -23,15 +24,12 @@ const BlogPage = () => {
       });
     }
 
+    setLoading(false);
     setPosts(blogPosts);
   };
-  console.log(posts);
-
   useEffect(() => {
-    setLoading(true);
     fetchPost();
-    setLoading(false);
-  }, [setLoading]);
+  }, []);
 
   return (
     <Layout pageTitle="My blogs">
