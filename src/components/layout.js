@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { container, heading, navlinkitem, content } from './layout.module.css';
+import { container, heading, content } from './layout.module.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Link } from 'gatsby';
 
 const Layout = ({ pageTitle, children }) => {
   return (
@@ -10,12 +11,18 @@ const Layout = ({ pageTitle, children }) => {
         <Container>
           <Navbar.Brand href="/">Ibrahim's Blog</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/blog">Blog</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link className={navlinkitem} href="/post">
+            <Link style={{ color: 'white', marginTop: 0, fontSize: 30, marginLeft: 10, marginRight: 10 }} to="/">
+              Home
+            </Link>
+            <Link style={{ color: 'white', marginTop: 0, fontSize: 30, marginLeft: 10, marginRight: 10 }} to="/blog">
+              Blog
+            </Link>
+            <Link style={{ color: 'white', marginTop: 0, fontSize: 30, marginLeft: 10, marginRight: 10 }} to="/about">
+              About
+            </Link>
+            <Link style={{ color: 'white', marginTop: 0, fontSize: 30, marginLeft: 700 }} to="/post">
               Post
-            </Nav.Link>
+            </Link>
           </Nav>
         </Container>
       </Navbar>

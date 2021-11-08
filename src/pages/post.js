@@ -4,7 +4,7 @@ import { Form, Button, Spinner } from 'react-bootstrap';
 import { spinner } from './page-styles/post.module.css';
 import MyVerticallyCenteredModal from '../components/MyVerticallyCenteredModal';
 
-const AboutPage = () => {
+const PostPage = () => {
   const [loading, setLoading] = useState(false);
   const [modalShow, setModalShow] = useState(false);
 
@@ -20,7 +20,7 @@ const AboutPage = () => {
     }
 
     setLoading(true);
-    const response = await fetch('https://personal-blog-978b9-default-rtdb.firebaseio.com/posts.json', {
+    await fetch('https://personal-blog-978b9-default-rtdb.firebaseio.com/posts.json', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,4 +56,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default PostPage;
