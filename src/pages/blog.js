@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout';
 import { Card, Spinner } from 'react-bootstrap';
 import { spinner } from './page-styles/post.module.css';
-import { Link } from 'gatsby';
+import { Link } from '../components/LinkWithPrevUrl';
 
 const BlogPage = () => {
   const [loading, setLoading] = useState(false);
