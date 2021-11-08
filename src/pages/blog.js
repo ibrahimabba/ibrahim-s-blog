@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout';
 import { Card, Spinner } from 'react-bootstrap';
-import { spinner } from './page-styles/post.module.css';
+import { spinner, detailText } from './page-styles/post.module.css';
 import { Link } from '../components/LinkWithPrevUrl';
 
 const BlogPage = () => {
@@ -46,7 +46,7 @@ const BlogPage = () => {
               <Card.Subtitle style={{ fontSize: 12 }} className="mb-2 text-muted">
                 {post.created}
               </Card.Subtitle>
-              <Card.Text>{post.details}</Card.Text>
+              <p className={detailText}>{post.details}</p>
               <Link to="/details/" state={{ post: post }}>
                 View Post
               </Link>

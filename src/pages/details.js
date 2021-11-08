@@ -12,7 +12,7 @@ const BlogDetail = ({ location }) => {
       return;
     }
     setPost(location.state.post);
-  }, []);
+  });
   return (
     <Layout pageTitle="">
       <div>

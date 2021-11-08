@@ -1,3 +1,13 @@
 .spinner {
   margin: 150px;
 }
+
+.detailText {
+  width: 700px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1 rem;
+  background: white;
+  resize: vertical;
+}
